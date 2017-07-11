@@ -22,8 +22,8 @@ public class helloRest {
 //        return girlProperties.getCupSize()+girlProperties.getAge()+myId;
 //    }
 
-    @GetMapping (value = {"/hello","/hi"})
-    public String hello(@RequestParam(value="id",required=false,defaultValue = "11") Integer myId){
-        return girlProperties.getCupSize()+girlProperties.getAge()+myId;
+    @PostMapping (value = {"/hello","/hi"})
+    public String hello(@RequestParam(value="id",required=false,defaultValue = "11") Integer myId2){
+        return girlProperties.getCupSize()+girlProperties.getAge()+myId2;
     }
 }
