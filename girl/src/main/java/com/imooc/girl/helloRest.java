@@ -23,7 +23,7 @@ public class helloRest {
 //    }
 
     @PostMapping (value = {"/hello","/hi"})
-    public String hello(@RequestParam(value="id",required=false,defaultValue = "11") Integer myId2){
-        return girlProperties.getCupSize()+girlProperties.getAge()+myId2;
+    public String hello(@RequestParam(value="id",required=false,defaultValue = "11") Integer myId1){
+        return girlProperties.getCupSize()+girlProperties.getAge()+myId1;
     }
 }
