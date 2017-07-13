@@ -3,7 +3,10 @@ spring:
     active: prod
 
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
+    driverClassName: com.mysql.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/itcast
     username: root
     password: cxm1011
+
+mybatis:
+  mapper-locations: mapper/*Mapper.xml
