@@ -1,5 +1,6 @@
 package com.imooc.girl.mapper;
 
+import com.imooc.girl.model.entity.GirlEntity;
 import com.imooc.girl.model.json.GirlJson;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -12,4 +13,6 @@ import java.util.List;
 public interface GirlMapper {
 
     List<GirlJson> queryGirl();
+
+    void  saveGirl(GirlEntity girlEntity);
 }

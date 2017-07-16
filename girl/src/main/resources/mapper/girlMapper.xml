@@ -11,4 +11,35 @@
         SELECT id,name,height FROM girl
     </select>
 
+    <insert id="saveGirl" parameterType="com.imooc.girl.model.entity.GirlEntity">
+        INSERT INTO girl
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            id,
+            <if test = "name != null">
+                name,
+            </if>
+            <if test = "height != null">
+                height,
+            </if>
+            <if test = "age != null">
+                age,
+            </if>
+
+        </trim>
+        VALUES
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            #{id},
+            <if test = "name != null">
+                #{name},
+            </if>
+            <if test = "height != null">
+                #{height},
+            </if>
+            <if test = "age != null">
+                #{age},
+            </if>
+
+        </trim>
+    </insert>
+
 </mapper>

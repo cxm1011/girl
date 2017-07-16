@@ -1,6 +1,7 @@
 package com.imooc.girl.service.impl;
 
 import com.imooc.girl.mapper.GirlMapper;
+import com.imooc.girl.model.entity.GirlEntity;
 import com.imooc.girl.model.json.GirlJson;
 import com.imooc.girl.service.GirlService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,5 +19,11 @@ public class GirlServiceImpl implements GirlService{
     @Override
     public List<GirlJson> queryGirl() {
         return girlMapper.queryGirl();
+    }
+
+    @Override
+    public boolean saveGirl(GirlEntity girlEntity) {
+         girlMapper.saveGirl(girlEntity);
+         return true;
     }
 }

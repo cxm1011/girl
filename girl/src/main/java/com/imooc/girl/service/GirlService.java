@@ -1,5 +1,6 @@
 package com.imooc.girl.service;
 
+import com.imooc.girl.model.entity.GirlEntity;
 import com.imooc.girl.model.json.GirlJson;
 
 import java.util.List;
@@ -9,4 +10,6 @@ import java.util.List;
  */
 public interface GirlService {
     List<GirlJson> queryGirl();
+
+    boolean saveGirl(GirlEntity girlEntity);
 }
