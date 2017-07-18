@@ -11,5 +11,7 @@ import java.util.List;
 public interface GirlService {
     List<GirlJson> queryGirl();
 
+    int  queryGirlAgeById(int id);
+
     boolean saveGirl(GirlEntity girlEntity);
 }

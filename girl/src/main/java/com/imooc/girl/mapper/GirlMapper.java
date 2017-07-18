@@ -14,5 +14,7 @@ public interface GirlMapper {
 
     List<GirlJson> queryGirl();
 
+    Integer queryGirlAgeById(Integer id);
+
     void  saveGirl(GirlEntity girlEntity);
 }

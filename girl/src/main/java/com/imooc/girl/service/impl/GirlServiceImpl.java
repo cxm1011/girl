@@ -22,6 +22,11 @@ public class GirlServiceImpl implements GirlService{
     }
 
     @Override
+    public int queryGirlAgeById(int id) {
+        return girlMapper.queryGirlAgeById(id);
+    }
+
+    @Override
     public boolean saveGirl(GirlEntity girlEntity) {
          girlMapper.saveGirl(girlEntity);
          return true;

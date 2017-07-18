@@ -11,6 +11,10 @@
         SELECT id,name,height FROM girl
     </select>
 
+    <select id="queryGirlAgeById" parameterType="Integer" resultType="java.lang.Integer">
+        SELECT age FROM girl WHERE id=#{id}
+    </select>
+
     <insert id="saveGirl" parameterType="com.imooc.girl.model.entity.GirlEntity">
         INSERT INTO girl
         <trim prefix="(" suffix=")" suffixOverrides=",">

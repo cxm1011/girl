@@ -31,4 +31,13 @@ public class GirlJson {
     public void setHeight(Integer height) {
         this.height = height;
     }
+
+    @Override
+    public String toString() {
+        return "GirlJson{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", height=" + height +
+                '}';
+    }
 }
