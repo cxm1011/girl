@@ -1,12 +1,10 @@
 package com.imooc.girl.controller;
 
-import com.imooc.girl.aspect.HttpAspect;
 import com.imooc.girl.model.entity.GirlEntity;
 import com.imooc.girl.model.json.GirlJson;
 import com.imooc.girl.result.Result;
 import com.imooc.girl.service.GirlService;
 import com.imooc.girl.utils.ResultUtil;
-import org.aspectj.lang.annotation.Pointcut;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,8 +34,8 @@ public class GirlController {
     }
 
     @GetMapping(value = "/queryAge/{id}")
-    public Integer queryAge(@PathVariable("id") Integer id){
-        return girlService.queryGirlAgeById(id);
+    public void queryAge(@PathVariable("id") Integer id) throws Exception {
+        girlService.queryGirlAgeById(id);
     }
 
     @PostMapping(value = "/saveGirl")

@@ -11,7 +11,7 @@ import java.util.List;
 public interface GirlService {
     List<GirlJson> queryGirl();
 
-    int  queryGirlAgeById(int id);
+    void  queryGirlAgeById(int id) throws Exception;
 
     boolean saveGirl(GirlEntity girlEntity);
 }

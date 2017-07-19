@@ -1,5 +1,7 @@
 package com.imooc.girl.service.impl;
 
+import com.imooc.girl.enums.ResultEnum;
+import com.imooc.girl.exception.GirlException;
 import com.imooc.girl.mapper.GirlMapper;
 import com.imooc.girl.model.entity.GirlEntity;
 import com.imooc.girl.model.json.GirlJson;
@@ -22,8 +24,14 @@ public class GirlServiceImpl implements GirlService{
     }
 
     @Override
-    public int queryGirlAgeById(int id) {
-        return girlMapper.queryGirlAgeById(id);
+    public void queryGirlAgeById(int id) throws Exception {
+        int age = girlMapper.queryGirlAgeById(id);
+        if(age < 10){
+            throw new GirlException(ResultEnum.PRIMARY_SCHOOL);
+        }
+        else  if(age > 10 && age < 16){
+            throw new GirlException(ResultEnum.MIDDLE_SCHOOL);
+        }
     }
 
     @Override
