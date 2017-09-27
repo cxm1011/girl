@@ -5,3 +5,15 @@ server:
 girl:
   cupSize: F
   age: 18
+
+#spring.thymeleaf.prefix=classpath:/templates/
+#spring.thymeleaf.suffix=.html
+#spring:thymeleaf.mode=LEGACYHTML5
+#spring.thymeleaf.encoding=UTF-8
+# ;charset=<encoding> is added
+#spring.thymeleaf.content-type=text/html
+# set to false for hot refresh
+
+spring:
+  thymeleaf:
+    cache:false
